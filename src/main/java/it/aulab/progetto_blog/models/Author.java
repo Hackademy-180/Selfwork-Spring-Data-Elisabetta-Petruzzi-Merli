@@ -3,6 +3,8 @@ package it.aulab.progetto_blog.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,6 +32,7 @@ public class Author {
 
     // un autore collegato a più post
     @OneToMany(mappedBy = "author")
+    @JsonIgnoreProperties({"author"})
     private List<Post>posts = new ArrayList<Post>();  //ci restituisce lista vuota
 
    
