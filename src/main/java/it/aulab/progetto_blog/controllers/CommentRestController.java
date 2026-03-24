@@ -10,8 +10,8 @@ import it.aulab.progetto_blog.models.Comment;
 import it.aulab.progetto_blog.repositories.CommentRepository;
 
 @RestController
-@RequestMapping("/comments")
-public class CommentController {
+@RequestMapping("/api/comments")
+public class CommentRestController {
     @Autowired
     CommentRepository commentRepository;
 
